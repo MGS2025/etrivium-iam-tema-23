@@ -20,7 +20,8 @@
 | `[RFC9112]` | IETF. *RFC 9112: HTTP/1.1*. Sintaxis de mensajes HTTP/1.1. |
 | `[RFC9113]` | IETF. *RFC 9113: HTTP/2*. |
 | `[RFC9114]` | IETF. *RFC 9114: HTTP/3* (sobre QUIC/RFC 9000). |
-| `[RFC8446]` | IETF. *RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3*. |
+| `[RFC9846]` | IETF. *RFC 9846: The Transport Layer Security (TLS) Protocol Version 1.3* (julio de 2026). Obsoleta los RFC 5077, 5246, 6961, 7627, 8422 y 8446: es la especificación vigente de TLS 1.3 y sustituye a la de 2018. |
+| `[RFC8446]` | IETF. *RFC 8446: The Transport Layer Security (TLS) Protocol Version 1.3* (agosto de 2018). Obsoletado por el RFC 9846. Se conserva la referencia porque es la que recogen los temarios al uso. |
 | `[FIELDING2000]` | Fielding, R. T. *Architectural Styles and the Design of Network-based Software Architectures* (tesis doctoral, UC Irvine, 2000). Origen del estilo arquitectónico cliente-servidor por capas y de REST. |
 | `[XML10]` | W3C. *Extensible Markup Language (XML) 1.0* (5.ª edición). w3.org/TR/xml. |
 | `[XML-NAMESPACES]` | W3C. *Namespaces in XML 1.0*. w3.org/TR/xml-names. |

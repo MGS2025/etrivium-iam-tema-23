@@ -16,15 +16,15 @@
 
 Este tema incluye cuatro tipos de **cajas callout** para facilitar el estudio:
 
-> **[DATO CLAVE EXAMEN]** Información de alta densidad memorística, con alta probabilidad de aparecer en el test oficial.
+> **[DATO CLAVE]** Información de alta densidad memorística.
 
 > **[EJERCICIO RESUELTO]** Problema + solución paso a paso (identificación de una tecnología, elección arquitectónica razonada).
 
-> **[EJEMPLO AYTO MADRID]** Aplicación real de la teoría al entorno municipal (sede electrónica, trámites, notificaciones).
+> **[EJEMPLO DE APLICACIÓN EN EL AYTO]** Aplicación real de la teoría al entorno municipal (sede electrónica, trámites, notificaciones).
 
-> **[REFERENCIA CRUZADA]** Enlace conceptual a otros temas del temario oficial.
+> **[RELACIÓN CON OTROS TEMAS]** Enlace conceptual a otros temas del temario oficial.
 
-Los ejemplos de **código** se escriben en **HTML, CSS, JavaScript, PHP y Python reales** (no en pseudocódigo neutro), porque este tema trata precisamente de esas tecnologías concretas — un pseudocódigo agnóstico perdería el sentido didáctico (decisión de Joan, mismo criterio que T21). Los fragmentos son deliberadamente breves e ilustrativos, no aplicaciones completas. Las fuentes se citan con etiquetas breves tipo `[WHATWG-HTML]` o `[MDN-JS]`; el registro completo está en `tema-23-fuentes.md`.
+Los ejemplos de **código** se escriben en **HTML, CSS, JavaScript, PHP y Python reales** (no en pseudocódigo neutro), porque este tema trata precisamente de esas tecnologías concretas — un pseudocódigo agnóstico perdería el sentido didáctico (mismo criterio que T21). Los fragmentos son deliberadamente breves e ilustrativos, no aplicaciones completas. Las fuentes se citan con etiquetas breves tipo `[WHATWG-HTML]` o `[MDN-JS]`; el registro completo está en `tema-23-fuentes.md`.
 
 **Caso de referencia usado en todo el tema** (contexto Ayuntamiento de Madrid, simplificado): la **sede electrónica** municipal, una aplicación web donde el ciudadano consulta y presenta trámites (por ejemplo, una solicitud de cita previa o de licencia), con un front-end HTML5/CSS/JavaScript responsivo y accesible, un back-end que genera contenido dinámico y expone una API, autenticación y sesión seguras, y una capa progresiva (PWA) que permite consultar el estado de un trámite incluso con conectividad intermitente.
 
@@ -44,7 +44,7 @@ La evolución histórica suele describirse en generaciones:
 | **Web 2.0** | 2000-2010 | Contenido **generado por el usuario**, aplicaciones interactivas con **AJAX** (§7.2.2) que actualizan partes de la página sin recargarla completa, auge de redes sociales y wikis. |
 | **Web moderna (SPA/PWA)** | 2010-presente | *Single Page Applications* con *frameworks* de front-end (§7.4), APIs REST (§8.5), y **Progressive Web Apps** (§9.3) que difuminan la frontera entre web y aplicación nativa. |
 
-> **[DATO CLAVE EXAMEN]** La transición **Web 1.0 → Web 2.0** se marca por el paso de páginas **estáticas** a aplicaciones que usan **AJAX** para actualizar contenido sin recargar la página completa; la transición hacia la **web moderna** se marca por la separación clara entre front-end (SPA) y back-end (API REST), y por la aparición de las **PWA** [WHATWG-HTML].
+> **[DATO CLAVE]** La transición **Web 1.0 → Web 2.0** se marca por el paso de páginas **estáticas** a aplicaciones que usan **AJAX** para actualizar contenido sin recargar la página completa; la transición hacia la **web moderna** se marca por la separación clara entre front-end (SPA) y back-end (API REST), y por la aparición de las **PWA** [WHATWG-HTML].
 
 ### 1.2. Características y ventajas frente a las aplicaciones de escritorio
 
@@ -57,7 +57,7 @@ Frente a una aplicación de escritorio (instalada localmente, ligada a un sistem
 
 Como contrapartida, una aplicación web depende de la **conectividad de red** (mitigado parcialmente por las PWA, §9.3), tiene menos acceso directo al hardware del dispositivo que una aplicación nativa, y su rendimiento depende del motor de JavaScript del navegador (§6.2) además del propio hardware.
 
-> **[EJEMPLO AYTO MADRID]** La sede electrónica del Ayuntamiento de Madrid es un ejemplo directo de esta ventaja: cualquier ciudadano, desde cualquier dispositivo con navegador, presenta una solicitud sin instalar software municipal específico ni preocuparse de qué sistema operativo usa su ordenador o móvil.
+> **[EJEMPLO DE APLICACIÓN EN EL AYTO]** La sede electrónica del Ayuntamiento de Madrid es un ejemplo directo de esta ventaja: cualquier ciudadano, desde cualquier dispositivo con navegador, presenta una solicitud sin instalar software municipal específico ni preocuparse de qué sistema operativo usa su ordenador o móvil.
 
 ### 1.3. Arquitectura general de una aplicación web
 
@@ -70,11 +70,11 @@ El modelo **cliente-servidor** es el fundamento arquitectónico de toda aplicaci
 
 Una característica esencial de HTTP, protocolo base de esta comunicación (§2.3), es que es **sin estado** (*stateless*): cada petición se procesa de forma independiente, sin memoria de peticiones anteriores por parte del servidor. Esta característica obliga a mecanismos explícitos de gestión de sesión (§3.4, §8.4) cuando la aplicación necesita «recordar» al usuario entre peticiones.
 
-> **[DATO CLAVE EXAMEN]** HTTP es **sin estado** (*stateless*): el servidor no recuerda nada de una petición anterior por sí mismo. Toda «sesión de usuario» percibida en una aplicación web es una **ilusión construida** sobre mecanismos añadidos (cookies, tokens) — no una propiedad nativa del protocolo [RFC9110].
+> **[DATO CLAVE]** HTTP es **sin estado** (*stateless*): el servidor no recuerda nada de una petición anterior por sí mismo. Toda «sesión de usuario» percibida en una aplicación web es una **ilusión construida** sobre mecanismos añadidos (cookies, tokens) — no una propiedad nativa del protocolo [RFC9110].
 
 Sobre este modelo básico de dos niveles (*two-tier*), la arquitectura habitual de una aplicación web añade capas intermedias, dando lugar a arquitecturas **multicapa** (*n-tier*): presentación (front-end, §3) → lógica de negocio/aplicación (back-end, §8) → datos (§8.3). Esta separación de responsabilidades, descrita en detalle en el **Tema 22**, permite escalar y sustituir cada capa de forma independiente.
 
-> **[REFERENCIA CRUZADA]** El **Tema 22** desarrolla en profundidad las arquitecturas cliente/servidor multicapa y los protocolos de servicios web asociados; este tema se centra en **cómo se construye** cada extremo de esa arquitectura: el front-end que corre en el navegador y el back-end que corre en el servidor.
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 22** desarrolla en profundidad las arquitecturas cliente/servidor multicapa y los protocolos de servicios web asociados; este tema se centra en **cómo se construye** cada extremo de esa arquitectura: el front-end que corre en el navegador y el back-end que corre en el servidor.
 
 ---
 
@@ -82,11 +82,11 @@ Sobre este modelo básico de dos niveles (*two-tier*), la arquitectura habitual 
 
 ### 2.1. Internet, web y servicios asociados
 
-Es un error de examen frecuente **confundir Internet con la web**. **Internet** es la infraestructura global de redes interconectadas que permite el intercambio de paquetes de datos mediante el conjunto de protocolos **TCP/IP** (desarrollado en el **Tema 34**). La **World Wide Web** (WWW, o simplemente «la web») es **uno de los servicios** que se ejecutan sobre esa infraestructura: un sistema de documentos e información interconectados mediante **hipertexto**, accesible mediante el protocolo **HTTP/HTTPS** [WHATWG-HTML].
+Es un error frecuente **confundir Internet con la web**. **Internet** es la infraestructura global de redes interconectadas que permite el intercambio de paquetes de datos mediante el conjunto de protocolos **TCP/IP** (desarrollado en el **Tema 34**). La **World Wide Web** (WWW, o simplemente «la web») es **uno de los servicios** que se ejecutan sobre esa infraestructura: un sistema de documentos e información interconectados mediante **hipertexto**, accesible mediante el protocolo **HTTP/HTTPS** [WHATWG-HTML].
 
 Internet aloja, además de la web, otros servicios con protocolos propios: correo electrónico (SMTP/IMAP/POP3), transferencia de ficheros (FTP), resolución de nombres (DNS) o mensajería en tiempo real. La web se distingue por combinar tres elementos inventados por Tim Berners-Lee en 1989-1991: el propio protocolo **HTTP**, el lenguaje de marcado **HTML** (§4) y el sistema de direccionamiento **URI/URL** (§2.2).
 
-> **[DATO CLAVE EXAMEN]** **Internet ≠ Web**. Internet es la **red** (infraestructura TCP/IP); la Web es un **servicio** que corre sobre esa red, junto a otros (correo, FTP, DNS). Confundirlos es uno de los errores más comunes en examen [WHATWG-HTML].
+> **[DATO CLAVE]** **Internet ≠ Web**. Internet es la **red** (infraestructura TCP/IP); la Web es un **servicio** que corre sobre esa red, junto a otros (correo, FTP, DNS). Confundirlos es uno de los errores más comunes [WHATWG-HTML].
 
 ### 2.2. URL, URI y localización de recursos
 
@@ -107,11 +107,11 @@ Un **URI** (*Uniform Resource Identifier*) es una cadena de caracteres que **ide
 
 Existe también el concepto de **URN** (*Uniform Resource Name*), un URI que nombra un recurso de forma persistente **sin** indicar su ubicación (p. ej. un ISBN de libro): es la otra subcategoría de URI, junto a URL.
 
-> **[DATO CLAVE EXAMEN]** **Toda URL es un URI, pero no todo URI es una URL.** URI = identifica (puede ser solo un nombre, como un URN); URL = identifica **y** localiza (indica cómo llegar al recurso) [RFC3986].
+> **[DATO CLAVE]** **Toda URL es un URI, pero no todo URI es una URL.** URI = identifica (puede ser solo un nombre, como un URN); URL = identifica **y** localiza (indica cómo llegar al recurso) [RFC3986].
 
 ### 2.3. Protocolos involucrados
 
-El protocolo principal de la web es **HTTP** (*HyperText Transfer Protocol*), un protocolo de **petición-respuesta** de la capa de aplicación que se apoya en TCP (o en QUIC/UDP en su versión 3) [RFC9110]. Su versión segura, **HTTPS**, añade una capa de cifrado y autenticación mediante **TLS** (*Transport Layer Security*) [RFC8446], desarrollada con más detalle en el **Tema 35**.
+El protocolo principal de la web es **HTTP** (*HyperText Transfer Protocol*), un protocolo de **petición-respuesta** de la capa de aplicación que se apoya en TCP (o en QUIC/UDP en su versión 3) [RFC9110]. Su versión segura, **HTTPS**, añade una capa de cifrado y autenticación mediante **TLS** (*Transport Layer Security*) [RFC9846], desarrollada con más detalle en el **Tema 35**.
 
 | Versión | Año aprox. | Rasgo principal |
 |---|---|---|
@@ -132,7 +132,7 @@ Cada petición HTTP especifica un **método** (o verbo), que indica la acción a
 | `DELETE` | Elimina el recurso | Sí | No |
 | `HEAD` | Como GET, pero solo devuelve cabeceras (sin cuerpo) | Sí | Sí |
 
-> **[DATO CLAVE EXAMEN]** **Idempotente** no significa «sin efectos secundarios», sino que **repetir la misma petición N veces produce el mismo resultado final que hacerla una vez** (`DELETE` repetido dos veces deja el recurso igual de eliminado que una vez; `POST` repetido puede crear N recursos distintos) [RFC9110].
+> **[DATO CLAVE]** **Idempotente** no significa «sin efectos secundarios», sino que **repetir la misma petición N veces produce el mismo resultado final que hacerla una vez** (`DELETE` repetido dos veces deja el recurso igual de eliminado que una vez; `POST` repetido puede crear N recursos distintos) [RFC9110].
 
 Las **cabeceras** (*headers*) transportan metadatos de la petición o la respuesta sin formar parte del cuerpo: `Content-Type` (formato del cuerpo, p. ej. `application/json`), `Authorization` (credenciales), `Cache-Control` (directrices de caché, §3.4), `Set-Cookie` (§8.4). Los **códigos de estado** de la respuesta se agrupan en cinco familias:
 
@@ -144,7 +144,7 @@ Las **cabeceras** (*headers*) transportan metadatos de la petición o la respues
 | 4xx | Error del cliente | `400 Bad Request`, `401 Unauthorized`, `403 Forbidden`, `404 Not Found` |
 | 5xx | Error del servidor | `500 Internal Server Error`, `503 Service Unavailable` |
 
-> **[EJEMPLO AYTO MADRID]** Si un ciudadano intenta consultar un expediente sin haber iniciado sesión en la sede electrónica, el servidor responde `401 Unauthorized`; si ha iniciado sesión pero el expediente pertenece a otro ciudadano, la respuesta correcta es `403 Forbidden` (autenticado pero no autorizado) — una distinción muy preguntada en examen.
+> **[EJEMPLO DE APLICACIÓN EN EL AYTO]** Si un ciudadano intenta consultar un expediente sin haber iniciado sesión en la sede electrónica, el servidor responde `401 Unauthorized`; si ha iniciado sesión pero el expediente pertenece a otro ciudadano, la respuesta correcta es `403 Forbidden` (autenticado pero no autorizado).
 
 ---
 
@@ -166,7 +166,7 @@ El front-end web clásico se construye sobre tres tecnologías con responsabilid
 | **CSS** | **Presentación**: color, tipografía, disposición espacial | La ropa/el estilo |
 | **JavaScript** | **Comportamiento**: interactividad, lógica, comunicación con el servidor | Los músculos/reflejos |
 
-> **[DATO CLAVE EXAMEN]** La separación **estructura/presentación/comportamiento** (HTML/CSS/JS) es un **principio de diseño**, no una obligación técnica: HTML permite estilos en línea y JavaScript puede generar HTML, pero mezclarlos degrada el mantenimiento. Es la aplicación web del principio de **separación de responsabilidades** [W3C-CSS].
+> **[DATO CLAVE]** La separación **estructura/presentación/comportamiento** (HTML/CSS/JS) es un **principio de diseño**, no una obligación técnica: HTML permite estilos en línea y JavaScript puede generar HTML, pero mezclarlos degrada el mantenimiento. Es la aplicación web del principio de **separación de responsabilidades** [W3C-CSS].
 
 CSS (*Cascading Style Sheets*) aplica reglas de estilo mediante **selectores** que apuntan a elementos HTML, con un modelo de **cascada** (varias reglas pueden aplicar al mismo elemento; gana la de mayor especificidad, y a igual especificidad, la declarada después) y de **herencia** (algunas propiedades, como la tipografía, se propagan de un elemento padre a sus hijos salvo que se sobrescriban) [W3C-CSS]. Los módulos de maquetación modernos, **Flexbox** (para disposiciones en una dimensión) y **CSS Grid** (para disposiciones bidimensionales), han sustituido a técnicas antiguas basadas en `float` o tablas para maquetar.
 
@@ -211,13 +211,13 @@ La **accesibilidad web** consiste en diseñar y desarrollar de forma que las per
 
 La **usabilidad**, aunque relacionada, es un concepto más amplio: mide la **facilidad de uso** para cualquier usuario (eficacia, eficiencia y satisfacción al alcanzar sus objetivos), no solo para personas con discapacidad. Una aplicación puede ser accesible y a la vez poco usable (cumplir WCAG pero tener un flujo de trámite confuso), aunque en la práctica ambas disciplinas se refuerzan mutuamente.
 
-> **[REFERENCIA CRUZADA]** El **Tema 25** desarrolla en profundidad la accesibilidad, el diseño universal y la usabilidad como disciplina completa, incluyendo la confidencialidad y disponibilidad en el puesto de usuario final; este tema se limita a su aplicación concreta al front-end web.
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 25** desarrolla en profundidad la accesibilidad, el diseño universal y la usabilidad como disciplina completa, incluyendo la confidencialidad y disponibilidad en el puesto de usuario final; este tema se limita a su aplicación concreta al front-end web.
 
 #### 3.3.3. Normativa aplicable a las administraciones públicas
 
 En España, el **Real Decreto 1112/2018**, que transpone la Directiva (UE) 2016/2102, obliga a los sitios web y aplicaciones móviles del **sector público** —incluidos los ayuntamientos— a cumplir el nivel **AA** de las WCAG 2.1 (o superior), y a publicar una **declaración de accesibilidad** con un mecanismo de comunicación para que la ciudadanía reporte incumplimientos [RD1112-2018].
 
-> **[DATO CLAVE EXAMEN]** El **RD 1112/2018** exige nivel **AA** de WCAG (no el máximo AAA, que es orientativo) para sitios y apps del sector público, y obliga a una **declaración de accesibilidad** pública y revisable [RD1112-2018].
+> **[DATO CLAVE]** El **RD 1112/2018** exige nivel **AA** de WCAG (no el máximo AAA, que es orientativo) para sitios y apps del sector público, y obliga a una **declaración de accesibilidad** pública y revisable [RD1112-2018].
 
 ### 3.4. Mecanismos de almacenamiento local, sesión y caché
 
@@ -244,7 +244,7 @@ Además de las cookies (mecanismo clásico, desarrollado en §8.4), el navegador
 
 Tras varias versiones (HTML 2.0 a 4.01, e incluso el intento de sustituirlo por **XHTML**, §5.4), el desarrollo pasó del W3C al **WHATWG** (*Web Hypertext Application Technology Working Group*), un consorcio formado por los fabricantes de navegadores. Desde 2019, el W3C y el WHATWG acordaron que el **WHATWG Living Standard** es la única fuente normativa de HTML, sustituyendo al modelo de versiones numeradas fijas por un estándar «vivo» en evolución continua [WHATWG-HTML].
 
-> **[DATO CLAVE EXAMEN]** Desde **2019**, HTML ya no tiene «versiones» en sentido estricto: el **WHATWG Living Standard** es la única especificación de referencia, en evolución continua, sustituyendo al antiguo modelo de recomendaciones numeradas del W3C (HTML 4.01, XHTML, HTML5) [WHATWG-HTML].
+> **[DATO CLAVE]** Desde **2019**, HTML ya no tiene «versiones» en sentido estricto: el **WHATWG Living Standard** es la única especificación de referencia, en evolución continua, sustituyendo al antiguo modelo de recomendaciones numeradas del W3C (HTML 4.01, XHTML, HTML5) [WHATWG-HTML].
 
 ### 4.2. Estructura de un documento HTML
 
@@ -291,7 +291,7 @@ Frente al uso indiscriminado de `<div>` genéricos (habitual en HTML4), HTML5 in
 | `<aside>` | Contenido relacionado pero secundario (barra lateral) |
 | `<footer>` | Pie de página o de sección |
 
-> **[DATO CLAVE EXAMEN]** Las etiquetas semánticas **no cambian la apariencia** por defecto (siguen pudiendo estilizarse como cualquier `<div>`), pero mejoran la **accesibilidad** (los lectores de pantalla anuncian «navegación», «contenido principal»…) y el **SEO**, al describir explícitamente la estructura del documento a máquinas, no solo a humanos [WHATWG-HTML].
+> **[DATO CLAVE]** Las etiquetas semánticas **no cambian la apariencia** por defecto (siguen pudiendo estilizarse como cualquier `<div>`), pero mejoran la **accesibilidad** (los lectores de pantalla anuncian «navegación», «contenido principal»…) y el **SEO**, al describir explícitamente la estructura del documento a máquinas, no solo a humanos [WHATWG-HTML].
 
 #### 4.3.2. Formularios y contenidos multimedia
 
@@ -332,7 +332,7 @@ Para contenido multimedia, HTML5 introdujo los elementos nativos `<audio>` y `<v
 | Tolerancia a errores | Alta (el navegador «adivina» y corrige) | Nula: un documento mal formado se rechaza |
 | Case-sensitive | No (`<P>` = `<p>`) | Sí (`<Tramite>` ≠ `<tramite>`) |
 
-> **[DATO CLAVE EXAMEN]** La diferencia esencial no es «uno para web y otro para datos», sino que **HTML tiene un vocabulario fijo y tolera errores; XML permite vocabularios propios y exige rigor sintáctico total** — un documento XML «mal formado» (p. ej. una etiqueta sin cerrar) se considera **inválido en su totalidad**, sin la tolerancia que aplican los navegadores a HTML [XML10].
+> **[DATO CLAVE]** La diferencia esencial no es «uno para web y otro para datos», sino que **HTML tiene un vocabulario fijo y tolera errores; XML permite vocabularios propios y exige rigor sintáctico total** — un documento XML «mal formado» (p. ej. una etiqueta sin cerrar) se considera **inválido en su totalidad**, sin la tolerancia que aplican los navegadores a HTML [XML10].
 
 ### 5.2. Estructura de documentos XML
 
@@ -368,7 +368,7 @@ Que un documento XML esté **bien formado** (sintaxis correcta) no implica que s
 
 **DTD** (*Document Type Definition*) es el mecanismo de validación heredado de SGML; sigue en uso en sistemas heredados, pero **XML Schema** [XMLSCHEMA] es el estándar moderno del W3C, con la ventaja añadida de estar escrito en el propio XML y de permitir tipos de datos ricos (como restringir un campo `<fecha>` al formato `date` de ISO 8601, o un `<dni>` a un patrón de expresión regular).
 
-> **[DATO CLAVE EXAMEN]** **Bien formado ≠ Válido.** Bien formado = cumple la sintaxis general de XML (etiquetas cerradas, anidamiento correcto); válido = además cumple una gramática concreta (DTD o XSD) que define qué elementos, atributos y tipos son legítimos en ese documento [XML10; XMLSCHEMA].
+> **[DATO CLAVE]** **Bien formado ≠ Válido.** Bien formado = cumple la sintaxis general de XML (etiquetas cerradas, anidamiento correcto); válido = además cumple una gramática concreta (DTD o XSD) que define qué elementos, atributos y tipos son legítimos en ese documento [XML10; XMLSCHEMA].
 
 ### 5.4. Tecnologías derivadas de XML: XHTML, XSL/XSLT y SVG
 
@@ -378,7 +378,7 @@ Varias tecnologías web se construyen **aplicando las reglas de XML** a dominios
 - **XSL/XSLT** (*eXtensible Stylesheet Language / Transformations*): lenguaje declarativo, escrito en XML, para **transformar** un documento XML en otro formato (otro XML, HTML, texto plano) mediante plantillas de coincidencia de patrones [XSLT30]. Se usa, por ejemplo, para convertir datos XML de un sistema legado en HTML presentable, o en un formato XML distinto esperado por otra administración.
 - **SVG** (*Scalable Vector Graphics*): formato de gráficos **vectoriales** descrito íntegramente en XML, con elementos propios (`<circle>`, `<path>`, `<rect>`) que definen formas matemáticamente, por lo que **escalan sin perder calidad** a cualquier resolución —a diferencia de un mapa de bits (PNG/JPEG)— y pueden manipularse con CSS y JavaScript como cualquier otro nodo del DOM [SVG11]. Los propios diagramas de `tema-23-diagramas.md` son documentos SVG embebidos.
 
-> **[REFERENCIA CRUZADA]** El uso de SVG como formato de intercambio de gráficos vectoriales conecta con el **Tema 13** (formatos de información y ficheros): SVG es un ejemplo de formato **basado en texto y vectorial**, frente a formatos binarios de mapa de bits.
+> **[RELACIÓN CON OTROS TEMAS]** El uso de SVG como formato de intercambio de gráficos vectoriales conecta con el **Tema 13** (formatos de información y ficheros): SVG es un ejemplo de formato **basado en texto y vectorial**, frente a formatos binarios de mapa de bits.
 
 ---
 
@@ -394,7 +394,7 @@ Un **navegador web** (*browser*) es la aplicación cliente que interpreta URLs, 
 - **Intérprete/motor de JavaScript** (§6.2): ejecuta el código de comportamiento de la página.
 - **Backend de datos**: almacena localmente cookies, `localStorage`, historial, marcadores.
 
-> **[EJEMPLO AYTO MADRID]** Chrome, Firefox, Safari y Edge ejecutan cada pestaña en un **proceso separado** (aislamiento de procesos, *sandboxing*): si la pestaña de la sede electrónica se cuelga o es comprometida por un script malicioso, el resto de pestañas del navegador —y el sistema operativo— quedan protegidos.
+> **[EJEMPLO DE APLICACIÓN EN EL AYTO]** Chrome, Firefox, Safari y Edge ejecutan cada pestaña en un **proceso separado** (aislamiento de procesos, *sandboxing*): si la pestaña de la sede electrónica se cuelga o es comprometida por un script malicioso, el resto de pestañas del navegador —y el sistema operativo— quedan protegidos.
 
 ### 6.2. Motores de renderizado y ejecución
 
@@ -408,7 +408,7 @@ El **motor de renderizado** convierte el árbol DOM (§6.3) y las reglas CSS en 
 
 El **motor de JavaScript** es un componente independiente del motor de renderizado, responsable de **ejecutar** el código de comportamiento de la página: analiza (*parsing*) el código, lo compila mediante técnicas JIT (*Just-In-Time*, compilación en el momento de ejecución para acelerar el código «caliente») y lo ejecuta en un modelo de **hilo único** (*single-threaded*) con un **bucle de eventos** (*event loop*) que gestiona operaciones asíncronas (§7.2.2) sin bloquear la interfaz [V8-DOC].
 
-> **[DATO CLAVE EXAMEN]** JavaScript en el navegador es **de un solo hilo**: solo puede ejecutar una pieza de código a la vez. La sensación de «paralelismo» al hacer una petición de red (§7.2.2) se logra mediante el **bucle de eventos** y una cola de tareas, no mediante hilos reales concurrentes [V8-DOC].
+> **[DATO CLAVE]** JavaScript en el navegador es **de un solo hilo**: solo puede ejecutar una pieza de código a la vez. La sensación de «paralelismo» al hacer una petición de red (§7.2.2) se logra mediante el **bucle de eventos** y una cola de tareas, no mediante hilos reales concurrentes [V8-DOC].
 
 ### 6.3. Modelo de objetos del documento (DOM)
 
@@ -423,7 +423,7 @@ document.getElementById('btn-cita').addEventListener('click', () => {
 });
 ```
 
-> **[DATO CLAVE EXAMEN]** El DOM es una **API**, no un lenguaje: la misma estructura de árbol de nodos puede manipularse desde JavaScript, pero también desde otros lenguajes que implementen la interfaz DOM. Confundir «DOM» con «JavaScript» es un error frecuente [W3C-DOM4].
+> **[DATO CLAVE]** El DOM es una **API**, no un lenguaje: la misma estructura de árbol de nodos puede manipularse desde JavaScript, pero también desde otros lenguajes que implementen la interfaz DOM. Confundir «DOM» con «JavaScript» es un error frecuente [W3C-DOM4].
 
 ### 6.4. Compatibilidad e interoperabilidad
 
@@ -442,7 +442,7 @@ Aunque todos los navegadores modernos siguen, en teoría, las mismas especificac
 
 Un **lenguaje de script** (o de guion) es un lenguaje de programación diseñado para **automatizar tareas dentro de un entorno anfitrión** (un navegador, un servidor, un sistema operativo), habitualmente **interpretado** (o compilado *just-in-time*) en lugar de compilado por adelantado a código máquina, con una sintaxis orientada a la productividad y la integración rápida más que al máximo rendimiento en bruto [ECMA262]. JavaScript es, con diferencia, el lenguaje de script más relevante en el contexto web, tanto en el cliente (§7.2) como, cada vez más, en el servidor (Node.js, §7.3).
 
-> **[REFERENCIA CRUZADA]** El **Tema 18** desarrolla los fundamentos generales de los lenguajes de programación (tipos de datos, estructuras de control, funciones); este tema se centra en cómo esos fundamentos se aplican específicamente al **entorno web**, tanto en scripting de cliente como de servidor.
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 18** desarrolla los fundamentos generales de los lenguajes de programación (tipos de datos, estructuras de control, funciones); este tema se centra en cómo esos fundamentos se aplican específicamente al **entorno web**, tanto en scripting de cliente como de servidor.
 
 ### 7.2. JavaScript en el lado cliente
 
@@ -482,9 +482,9 @@ async function consultarEstadoTramite(id) {
 }
 ```
 
-> **[DATO CLAVE EXAMEN]** El nombre **AJAX** es histórico: en su formulación original (2005) usaba XML como formato de intercambio; hoy la práctica casi universal es **JSON** (*JavaScript Object Notation*), más ligero y nativo del propio lenguaje JavaScript. El término «AJAX» ha sobrevivido como sinónimo genérico de «petición asíncrona desde el cliente», independientemente del formato real usado [MDN-JS].
+> **[DATO CLAVE]** El nombre **AJAX** es histórico: en su formulación original (2005) usaba XML como formato de intercambio; hoy la práctica casi universal es **JSON** (*JavaScript Object Notation*), más ligero y nativo del propio lenguaje JavaScript. El término «AJAX» ha sobrevivido como sinónimo genérico de «petición asíncrona desde el cliente», independientemente del formato real usado [MDN-JS].
 
-> **[EJEMPLO AYTO MADRID]** En la sede electrónica, al comprobar la disponibilidad de una franja horaria para cita previa, el formulario **no recarga la página**: una petición AJAX consulta al back-end (§8) y actualiza solo el desplegable de horas disponibles, manteniendo el resto del formulario ya rellenado por el ciudadano.
+> **[EJEMPLO DE APLICACIÓN EN EL AYTO]** En la sede electrónica, al comprobar la disponibilidad de una franja horaria para cita previa, el formulario **no recarga la página**: una petición AJAX consulta al back-end (§8) y actualiza solo el desplegable de horas disponibles, manteniendo el resto del formulario ya rellenado por el ciudadano.
 
 ### 7.3. Lenguajes de programación en servidor: PHP, Java y Python
 
@@ -518,7 +518,7 @@ def crear_cita():
     return jsonify(estado='confirmada'), 201
 ```
 
-> **[REFERENCIA CRUZADA]** El **Tema 21** desarrolla en profundidad la arquitectura **Java EE/Jakarta EE** como plataforma de servidor completa (Servlets, JSF, EJB, CDI, JPA); este tema sitúa Java como una de las opciones de lenguaje de servidor, junto a PHP y Python, sin repetir ese detalle.
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 21** desarrolla en profundidad la arquitectura **Java EE/Jakarta EE** como plataforma de servidor completa (Servlets, JSF, EJB, CDI, JPA); este tema sitúa Java como una de las opciones de lenguaje de servidor, junto a PHP y Python, sin repetir ese detalle.
 
 También **JavaScript** ha cruzado al servidor gracias a **Node.js**, un entorno de ejecución que emplea el motor **V8** (§6.2) fuera del navegador, con un modelo de E/S **no bloqueante** especialmente adecuado para aplicaciones con muchas conexiones concurrentes de corta duración [NODE-DOC].
 
@@ -552,7 +552,7 @@ El back-end recupera y persiste datos consultando un **sistema de gestión de ba
 cursor.execute("SELECT * FROM expediente WHERE dni = %s", (dni,))
 ```
 
-> **[REFERENCIA CRUZADA]** Los **Temas 15, 17 y 19** desarrollan en profundidad los SGBD, el diseño de bases de datos y el lenguaje SQL; este tema se limita a cómo el back-end web **usa** esa capa de datos desde la lógica de la aplicación.
+> **[RELACIÓN CON OTROS TEMAS]** Los **Temas 15, 17 y 19** desarrollan en profundidad los SGBD, el diseño de bases de datos y el lenguaje SQL; este tema se limita a cómo el back-end web **usa** esa capa de datos desde la lógica de la aplicación.
 
 ### 8.4. Gestión de sesiones, autenticación y autorización
 
@@ -573,7 +573,7 @@ Conviene distinguir dos conceptos que se confunden con frecuencia:
 - **Autenticación**: verificar **quién es** el usuario (usuario/contraseña, certificado digital, `Cl@ve` en el caso de las administraciones públicas españolas).
 - **Autorización**: determinar **qué puede hacer** ese usuario ya identificado (qué trámites, qué expedientes, con qué rol).
 
-> **[DATO CLAVE EXAMEN]** Un `401 Unauthorized` (§2.3.1) en realidad señala un fallo de **autenticación** (el servidor no sabe quién eres, o tus credenciales no son válidas); un `403 Forbidden` señala un fallo de **autorización** (el servidor sabe quién eres, pero no tienes permiso para esa acción concreta). Es una fuente de examen recurrente porque el nombre del código 401 resulta contraintuitivo.
+> **[DATO CLAVE]** Un `401 Unauthorized` (§2.3.1) en realidad señala un fallo de **autenticación** (el servidor no sabe quién eres, o tus credenciales no son válidas); un `403 Forbidden` señala un fallo de **autorización** (el servidor sabe quién eres, pero no tienes permiso para esa acción concreta). El nombre del código 401 resulta contraintuitivo.
 
 Como alternativa a las cookies de sesión con estado en el servidor, muchas APIs (§8.5) usan **tokens** autocontenidos (como **JWT**, *JSON Web Token*), que incluyen la identidad y los permisos firmados digitalmente, sin que el servidor tenga que mantener un almacén de sesiones — a costa de la dificultad añadida de revocar un token individual antes de su expiración.
 
@@ -590,7 +590,7 @@ DELETE /api/tramites/1234        → eliminar el trámite 1234
 
 Frente a REST, el estilo más antiguo **SOAP** (*Simple Object Access Protocol*) envuelve cada mensaje en un sobre XML con un contrato formal descrito en **WSDL**, independiente del protocolo de transporte subyacente; sigue vigente en integraciones administrativas heredadas, aunque REST domina el desarrollo de APIs nuevas por su simplicidad y su alineamiento natural con HTTP.
 
-> **[REFERENCIA CRUZADA]** El **Tema 22** desarrolla en detalle las arquitecturas de servicios web (REST y SOAP) y sus protocolos asociados; este tema se limita a situar la API como el **punto de contacto** entre el front-end (que la consume, §7.2.2) y el back-end (que la implementa sobre su lógica de negocio y sus datos).
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 22** desarrolla en detalle las arquitecturas de servicios web (REST y SOAP) y sus protocolos asociados; este tema se limita a situar la API como el **punto de contacto** entre el front-end (que la consume, §7.2.2) y el back-end (que la implementa sobre su lógica de negocio y sus datos).
 
 ---
 
@@ -639,9 +639,9 @@ if ('serviceWorker' in navigator) {
 }
 ```
 
-> **[DATO CLAVE EXAMEN]** El **Service Worker** se ejecuta en un **hilo separado** de la página y **no tiene acceso al DOM** (§6.3): se comunica con la página mediante paso de mensajes. Esta separación es precisamente lo que le permite seguir funcionando (sirviendo contenido cacheado) aunque la pestaña de la aplicación esté cerrada o no exista conexión de red [SERVICE-WORKERS].
+> **[DATO CLAVE]** El **Service Worker** se ejecuta en un **hilo separado** de la página y **no tiene acceso al DOM** (§6.3): se comunica con la página mediante paso de mensajes. Esta separación es precisamente lo que le permite seguir funcionando (sirviendo contenido cacheado) aunque la pestaña de la aplicación esté cerrada o no exista conexión de red [SERVICE-WORKERS].
 
-> **[EJEMPLO AYTO MADRID]** Una sede electrónica convertida en PWA permite que un ciudadano, tras haber consultado una vez el estado de su expediente, pueda **volver a verlo sin conexión** (por ejemplo, en el metro) gracias al contenido cacheado por el Service Worker, aunque la actualización a un estado más reciente exija conectividad.
+> **[EJEMPLO DE APLICACIÓN EN EL AYTO]** Una sede electrónica convertida en PWA permite que un ciudadano, tras haber consultado una vez el estado de su expediente, pueda **volver a verlo sin conexión** (por ejemplo, en el metro) gracias al contenido cacheado por el Service Worker, aunque la actualización a un estado más reciente exija conectividad.
 
 ---
 
@@ -651,7 +651,7 @@ if ('serviceWorker' in navigator) {
 
 Una aplicación web amplía su **superficie de ataque** respecto a una aplicación de escritorio precisamente por lo que la hace valiosa: es accesible desde cualquier punto de Internet, procesa entrada de usuarios no confiables por definición, y mantiene sesiones (§8.4) que un atacante puede intentar suplantar. El punto de partida de cualquier estrategia de seguridad es asumir que **toda entrada del cliente es potencialmente hostil**, se presente como parámetro de URL, cuerpo de formulario, cabecera HTTP o cookie — nunca como un dato ya validado por el simple hecho de llegar del navegador.
 
-> **[REFERENCIA CRUZADA]** El **Tema 32** desarrolla los conceptos generales de seguridad de los sistemas de información (criptografía, firma digital, amenazas); el **Tema 25** trata la confidencialidad y disponibilidad en el puesto de usuario final; este tema se centra en las vulnerabilidades **específicas del desarrollo de aplicaciones web**.
+> **[RELACIÓN CON OTROS TEMAS]** El **Tema 32** desarrolla los conceptos generales de seguridad de los sistemas de información (criptografía, firma digital, amenazas); el **Tema 25** trata la confidencialidad y disponibilidad en el puesto de usuario final; este tema se centra en las vulnerabilidades **específicas del desarrollo de aplicaciones web**.
 
 ### 10.2. OWASP Top 10: vulnerabilidades más críticas
 
@@ -671,7 +671,7 @@ La mitigación estándar es la **consulta parametrizada** (§8.3), donde el moto
 
 El **control de acceso roto** (*broken access control*) ocurre cuando la aplicación no verifica correctamente, en el servidor, que el usuario autenticado tiene permiso sobre el recurso concreto que solicita —por ejemplo, cambiando el identificador de expediente en la URL para acceder al de otro ciudadano (una variante conocida como **IDOR**, *Insecure Direct Object Reference*)—. Es el riesgo situado en el **primer** puesto del OWASP Top 10 2021, precisamente por su frecuencia y su impacto directo sobre la confidencialidad de datos de terceros [OWASP-TOP10].
 
-> **[DATO CLAVE EXAMEN]** La inyección SQL se **mitiga en el código del back-end** (consultas parametrizadas u ORM), nunca confiando en la validación del front-end (§10.3.1): cualquier validación de cliente puede eludirse manipulando directamente la petición HTTP, sin pasar por el formulario ni el JavaScript de la página [OWASP-TOP10].
+> **[DATO CLAVE]** La inyección SQL se **mitiga en el código del back-end** (consultas parametrizadas u ORM), nunca confiando en la validación del front-end (§10.3.1): cualquier validación de cliente puede eludirse manipulando directamente la petición HTTP, sin pasar por el formulario ni el JavaScript de la página [OWASP-TOP10].
 
 #### 10.2.2. Cross-Site Scripting (XSS) y Cross-Site Request Forgery (CSRF)
 
@@ -692,7 +692,7 @@ La mitigación principal es **escapar toda salida** que incluya datos no control
 
 **CSRF** (*Cross-Site Request Forgery*) es un ataque distinto: engaña al **navegador ya autenticado** de la víctima para que envíe, sin su conocimiento, una petición a la aplicación vulnerable —por ejemplo, visitando una página maliciosa que incluye un formulario oculto que se autoenvía hacia la sede electrónica, aprovechando que el navegador adjunta automáticamente la cookie de sesión válida a cualquier petición hacia ese dominio—. Se mitiga con **tokens CSRF** (un valor secreto, único por sesión o por formulario, que el atacante no puede conocer ni predecir) y con el atributo de cookie `SameSite` (§8.4), que impide que el navegador adjunte la cookie de sesión en peticiones originadas desde otro dominio.
 
-> **[DATO CLAVE EXAMEN]** **XSS** explota la **confianza del usuario en el sitio** (el script se ejecuta como si fuera del propio dominio); **CSRF** explota la **confianza del sitio en el navegador ya autenticado del usuario** (la petición parece legítima porque lleva la cookie de sesión válida, aunque el usuario nunca la iniciase conscientemente). Distinguir estas dos direcciones de confianza es la clave para no confundirlas en examen [OWASP-TOP10].
+> **[DATO CLAVE]** **XSS** explota la **confianza del usuario en el sitio** (el script se ejecuta como si fuera del propio dominio); **CSRF** explota la **confianza del sitio en el navegador ya autenticado del usuario** (la petición parece legítima porque lleva la cookie de sesión válida, aunque el usuario nunca la iniciase conscientemente). Distinguir estas dos direcciones de confianza es la clave para no confundirlas [OWASP-TOP10].
 
 #### 10.2.3. Configuración incorrecta y componentes vulnerables
 

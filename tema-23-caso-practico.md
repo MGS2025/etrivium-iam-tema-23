@@ -163,4 +163,4 @@ elemento.textContent = ultimoMensaje;
 
 ---
 
-*Los tres casos son orientativos y pensados para la autoevaluación; las soluciones muestran una vía correcta, no la única posible. Todos los ejemplos usan HTML5, CSS3, JavaScript (ES2015+), Python y JSON reales, coherentes con la decisión de Joan de no usar pseudocódigo neutro en este tema.*
+*Los tres casos son orientativos y pensados para la autoevaluación; las soluciones muestran una vía correcta, no la única posible. Todos los ejemplos usan HTML5, CSS3, JavaScript (ES2015+), Python y JSON reales, sin pseudocódigo neutro.*

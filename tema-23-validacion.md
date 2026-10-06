@@ -23,7 +23,7 @@
 
 ## 2. Contenido teórico
 
-- [ ] El nivel de profundidad (10 secciones, con desarrollo extenso de seguridad por decisión expresa de Joan) es adecuado para C1 (¿hay que ampliar o recortar alguna sección?)
+- [ ] El nivel de profundidad (10 secciones, con desarrollo extenso de seguridad) es adecuado para C1 (¿hay que ampliar o recortar alguna sección?)
 - [ ] Las definiciones de URI/URL, idempotencia HTTP, 401 vs 403, bien formado vs válido, y XSS vs CSRF son correctas y están bien diferenciadas
 - [ ] La decisión de usar **snippets de código reales** (HTML/CSS/JS/PHP/Python) en lugar de pseudocódigo neutro es adecuada (¿o se prefiere un enfoque más conceptual?)
 - [ ] La sección 10 (Seguridad) desarrollada en profundidad no duplica innecesariamente el contenido de los Temas 25 y 32 (frontera revisada en changelog)

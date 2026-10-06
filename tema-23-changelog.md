@@ -4,6 +4,20 @@
 
 ---
 
+## v1.2 — 2026-10-01 — Normas vigentes y correcciones comunes de la revisión
+
+**Motivo**: revisión de la serie del 01-10-2026 (decisiones de Joan y María): normas caducadas con el patrón de dos filas en Fuentes y correcciones comunes (referencias al cliente y al origen del material, promesas sobre el examen, AP → AAPP).
+
+### Cambios
+
+- **RFC 8446 → RFC 9846**: fila vigente `[RFC9846]` y `[RFC8446]` como histórica; la cita de §1.3 pasa a `[RFC9846]`.
+- Leyenda de las cajas: se quita «con alta probabilidad de aparecer en el test oficial».
+- Fuera las promesas sobre el examen en contenido y diagrama D3 («error de examen frecuente», «muy preguntada en examen», «fuente de examen recurrente», «el par de examen más confundido»…).
+- Fuera las menciones «decisión de Joan» (contenido, caso práctico y validación).
+- Títulos de las cajas homogeneizados con los temas 1-10 (revisión jurídica): «Dato clave», «Ejemplo de aplicación en el Ayto» y «Relación con otros temas»; las cajas «Ejercicio resuelto» no cambian.
+
+---
+
 ## v1.1 — 2026-09-06 — Ficha de extensión y tiempo de estudio
 
 **Estado**: sin cambios de contenido. Solo se añade información sobre el propio tema.

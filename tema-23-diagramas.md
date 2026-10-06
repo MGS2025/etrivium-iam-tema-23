@@ -121,7 +121,7 @@
   <rect x="410" y="126" width="120" height="56" rx="5" fill="#e89822"/><text x="470" y="148" text-anchor="middle" class="t3">4xx</text><text x="470" y="166" text-anchor="middle" class="s3">Error cliente (401, 403, 404)</text>
   <rect x="540" y="126" width="120" height="56" rx="5" fill="#d13c3c"/><text x="600" y="148" text-anchor="middle" class="t3">5xx</text><text x="600" y="166" text-anchor="middle" class="s3">Error servidor (500, 503)</text>
   <rect x="60" y="200" width="560" height="130" rx="6" fill="none" stroke="#d13c3c" stroke-width="2"/>
-  <text x="340" y="222" text-anchor="middle" style="font:700 12px system-ui;fill:#d13c3c">401 vs 403 — el par de examen más confundido</text>
+  <text x="340" y="222" text-anchor="middle" style="font:700 12px system-ui;fill:#d13c3c">401 vs 403 — el par más confundido</text>
   <text x="90" y="248" class="l3"><tspan style="font-weight:700;fill:#d13c3c">401 Unauthorized</tspan> → fallo de AUTENTICACIÓN</text>
   <text x="90" y="266" class="l3">El servidor no sabe quién eres, o tus credenciales no son válidas</text>
   <text x="90" y="292" class="l3"><tspan style="font-weight:700;fill:#d13c3c">403 Forbidden</tspan> → fallo de AUTORIZACIÓN</text>
