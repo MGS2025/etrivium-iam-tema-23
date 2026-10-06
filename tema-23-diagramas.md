@@ -54,8 +54,8 @@
   <path d="M466 130 L212 130" stroke="#2d8659" stroke-width="3" marker-end="url(#b1)"/>
   <text x="340" y="150" text-anchor="middle" style="font:700 10.5px system-ui;fill:#2d8659">200 OK + JSON</text>
   <defs>
-    <marker id="a1" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#0055a0"/></marker>
-    <marker id="b1" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M9 0 L0 4.5 L9 9 z" fill="#2d8659"/></marker>
+    <marker id="a1" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#0055a0"/></marker>
+    <marker id="b1" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#2d8659"/></marker>
   </defs>
   <rect x="140" y="196" width="400" height="66" rx="6" fill="#d13c3c"/>
   <text x="340" y="220" text-anchor="middle" class="t1">HTTP es SIN ESTADO (stateless)</text>
@@ -115,11 +115,11 @@
   <rect x="540" y="34" width="120" height="40" rx="5" fill="#2d8659"/><text x="600" y="50" text-anchor="middle" class="t3">DELETE</text><text x="600" y="66" text-anchor="middle" class="s3">idempotente</text>
   <line x1="20" y1="92" x2="660" y2="92" stroke="#ccc" stroke-width="1"/>
   <text x="340" y="112" text-anchor="middle" style="font:700 11px system-ui;fill:#0055a0">Familias de códigos de estado</text>
-  <rect x="20" y="126" width="120" height="56" rx="5" fill="#888"/><text x="80" y="148" text-anchor="middle" class="t3">1xx</text><text x="80" y="166" text-anchor="middle" class="s3">Informativo</text>
-  <rect x="150" y="126" width="120" height="56" rx="5" fill="#2d8659"/><text x="210" y="148" text-anchor="middle" class="t3">2xx</text><text x="210" y="166" text-anchor="middle" class="s3">Éxito (200, 201, 204)</text>
-  <rect x="280" y="126" width="120" height="56" rx="5" fill="#0055a0"/><text x="340" y="148" text-anchor="middle" class="t3">3xx</text><text x="340" y="166" text-anchor="middle" class="s3">Redirección (301, 304)</text>
-  <rect x="410" y="126" width="120" height="56" rx="5" fill="#e89822"/><text x="470" y="148" text-anchor="middle" class="t3">4xx</text><text x="470" y="166" text-anchor="middle" class="s3">Error cliente (401, 403, 404)</text>
-  <rect x="540" y="126" width="120" height="56" rx="5" fill="#d13c3c"/><text x="600" y="148" text-anchor="middle" class="t3">5xx</text><text x="600" y="166" text-anchor="middle" class="s3">Error servidor (500, 503)</text>
+  <rect x="20" y="126" width="120" height="56" rx="5" fill="#888"/><text x="80" y="146" text-anchor="middle" class="t3">1xx</text><text x="80" y="169" text-anchor="middle" class="s3">Informativo</text>
+  <rect x="150" y="126" width="120" height="56" rx="5" fill="#2d8659"/><text x="210" y="146" text-anchor="middle" class="t3">2xx</text><text x="210" y="163" text-anchor="middle" class="s3">Éxito</text><text x="210" y="176" text-anchor="middle" class="s3">(200, 201, 204)</text>
+  <rect x="280" y="126" width="120" height="56" rx="5" fill="#0055a0"/><text x="340" y="146" text-anchor="middle" class="t3">3xx</text><text x="340" y="163" text-anchor="middle" class="s3">Redirección</text><text x="340" y="176" text-anchor="middle" class="s3">(301, 304)</text>
+  <rect x="410" y="126" width="120" height="56" rx="5" fill="#e89822"/><text x="470" y="146" text-anchor="middle" class="t3">4xx</text><text x="470" y="163" text-anchor="middle" class="s3">Error cliente</text><text x="470" y="176" text-anchor="middle" class="s3">(401, 403, 404)</text>
+  <rect x="540" y="126" width="120" height="56" rx="5" fill="#d13c3c"/><text x="600" y="146" text-anchor="middle" class="t3">5xx</text><text x="600" y="163" text-anchor="middle" class="s3">Error servidor</text><text x="600" y="176" text-anchor="middle" class="s3">(500, 503)</text>
   <rect x="60" y="200" width="560" height="130" rx="6" fill="none" stroke="#d13c3c" stroke-width="2"/>
   <text x="340" y="222" text-anchor="middle" style="font:700 12px system-ui;fill:#d13c3c">401 vs 403 — el par más confundido</text>
   <text x="90" y="248" class="l3"><tspan style="font-weight:700;fill:#d13c3c">401 Unauthorized</tspan> → fallo de AUTENTICACIÓN</text>
@@ -190,7 +190,7 @@
   <rect x="472" y="52" width="156" height="30" rx="3" fill="#0055a0"/><text x="550" y="72" text-anchor="middle" class="s5">Cabecera</text>
   <rect x="472" y="90" width="60" height="128" rx="3" fill="#e89822"/><text x="502" y="158" text-anchor="middle" class="s5" style="font-size:8px">Nav</text>
   <rect x="536" y="90" width="60" height="128" rx="3" fill="#2d8659"/><text x="566" y="158" text-anchor="middle" class="s5" style="font-size:8px">Contenido</text>
-  <rect x="600" y="90" width="28" height="128" rx="3" fill="#d13c3c"/>
+  <rect x="600" y="90" width="28" height="128" rx="3" fill="#d13c3c"/><text x="614" y="154" text-anchor="middle" class="s5" style="font-size:8px" transform="rotate(-90 614 154)" dy="3">Lateral</text>
   <text x="550" y="256" text-anchor="middle" class="l5" style="font-weight:700">Escritorio (&gt; 960px)</text>
   <text x="340" y="288" text-anchor="middle" style="font:700 11px system-ui;fill:#0055a0">@media (max-width: 600px) { .layout { flex-direction: column } }</text>
   <text x="670" y="312" text-anchor="end" style="font:11px system-ui;fill:#666">[Fuente: MDN-CSS]</text>
@@ -249,7 +249,7 @@
 **Propósito**: Mapear visualmente `<header>`, `<nav>`, `<main>`, `<article>`, `<aside>` y `<footer>` sobre una página típica.
 
 ```svg
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img" aria-label="Layout de página con etiquetas semánticas HTML5: header en la parte superior, nav debajo, main con article a la izquierda y aside a la derecha, footer en la parte inferior">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 350" role="img" aria-label="Layout de página con etiquetas semánticas HTML5: header en la parte superior, nav debajo, main con article a la izquierda y aside a la derecha, footer en la parte inferior">
   <style>.t7{font:700 11px system-ui,sans-serif;fill:#fff}.s7{font:9.5px system-ui,sans-serif;fill:#fff}.h7{font:700 13px system-ui,sans-serif;fill:#0055a0}</style>
   <text x="340" y="20" text-anchor="middle" class="h7">Etiquetas semánticas HTML5</text>
   <rect x="60" y="36" width="560" height="44" rx="4" fill="#0055a0"/><text x="340" y="63" text-anchor="middle" class="t7">&lt;header&gt;</text>
@@ -259,7 +259,7 @@
   <rect x="72" y="150" width="350" height="116" rx="4" fill="#2d8659"/><text x="247" y="212" text-anchor="middle" class="t7">&lt;article&gt;</text>
   <rect x="432" y="150" width="176" height="116" rx="4" fill="#e89822"/><text x="520" y="212" text-anchor="middle" class="t7">&lt;aside&gt;</text>
   <rect x="60" y="284" width="560" height="40" rx="4" fill="#d13c3c"/><text x="340" y="308" text-anchor="middle" class="t7">&lt;footer&gt;</text>
-  <text x="670" y="332" text-anchor="end" style="font:11px system-ui;fill:#666">[Fuente: WHATWG-HTML]</text>
+  <text x="670" y="343" text-anchor="end" style="font:11px system-ui;fill:#666">[Fuente: WHATWG-HTML]</text>
 </svg>
 ```
 
@@ -384,7 +384,7 @@
   <text x="460" y="194" text-anchor="middle" class="s11">Respuesta lista, en espera</text>
   <path d="M140 212 L300 250" stroke="#888" stroke-width="2"/>
   <path d="M460 212 L380 250" stroke="#888" stroke-width="2"/>
-  <rect x="230" y="252" width="220" height="60" rx="6" fill="#0055a0"/>
+  <rect x="200" y="252" width="280" height="60" rx="6" fill="#0055a0"/>
   <text x="340" y="278" text-anchor="middle" class="t11">Bucle de eventos</text>
   <text x="340" y="296" text-anchor="middle" class="s11">Ejecuta la continuación cuando el hilo está libre</text>
   <text x="670" y="332" text-anchor="end" style="font:11px system-ui;fill:#666">[Fuente: V8-DOC; MDN-JS]</text>

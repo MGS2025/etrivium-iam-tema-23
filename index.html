@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tema 23 v1.2 — ETRIVIUM IAM</title>
+<title>Tema 23 v1.3 — ETRIVIUM IAM</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{--azul:#0055a0;--azul-dark:#003d73;--azul-deep:#002a52;--azul-light:#e8f0f8;--azul-05:rgba(0,85,160,.05);--azul-10:rgba(0,85,160,.10);--verde:#2d8659;--verde-bg:#e8f5ee;--rojo:#d13c3c;--rojo-bg:#fbeeed;--amber:#e89822;--amber-bg:#fdf4e4;--g100:#f5f7fa;--g200:#e8ecf0;--g300:#d1d7df;--g600:#4a5568;--g800:#2d3748;--font:'DM Sans',-apple-system,system-ui,sans-serif;--rad:8px;--sh:0 1px 3px rgba(0,0,0,.08);--shl:0 4px 16px rgba(0,0,0,.08)}
@@ -80,12 +80,12 @@ svg{max-width:100%;height:auto;display:block;margin:14px auto;background:#fff;bo
 </head>
 <body>
 <div class="wrap">
-<nav class="tabs"><button class="tab-btn active" data-tab="inicio">Inicio <span class='version-badge'>v1.2</span></button><button class="tab-btn" data-tab="contenido">Contenido</button><button class="tab-btn" data-tab="indice">Índice</button><button class="tab-btn" data-tab="diagramas">Diagramas</button><button class="tab-btn" data-tab="test">Test</button><button class="tab-btn" data-tab="casos">Casos</button><button class="tab-btn" data-tab="validacion">Validación</button><button class="tab-btn" data-tab="fuentes">Fuentes</button></nav>
+<nav class="tabs"><button class="tab-btn active" data-tab="inicio">Inicio <span class='version-badge'>v1.3</span></button><button class="tab-btn" data-tab="contenido">Contenido</button><button class="tab-btn" data-tab="indice">Índice</button><button class="tab-btn" data-tab="diagramas">Diagramas</button><button class="tab-btn" data-tab="test">Test</button><button class="tab-btn" data-tab="casos">Casos</button><button class="tab-btn" data-tab="validacion">Validación</button><button class="tab-btn" data-tab="fuentes">Fuentes</button></nav>
 <section id="tab-inicio" class="tab-content active"><div class="hero">
-  <span class="vbadge">v1.2</span>
+  <span class="vbadge">v1.3</span>
   <h1>Tema 23 — Aplicaciones web</h1>
   <div class="sub">Front-end y servidor · Multiplataforma y multidispositivo · HTML, XML y derivaciones · Navegadores · Lenguajes de script</div>
-  <div class="banner"><strong>Parte II — Técnico · C1 Ayuntamiento de Madrid</strong> · Piloto v1.2 · 2026-07-21 · Pendiente de validación</div>
+  <div class="banner"><strong>Parte II — Técnico · C1 Ayuntamiento de Madrid</strong> · Piloto v1.3 · 2026-07-21 · Pendiente de validación</div>
 </div><!-- ficha-estudio:ini --><div class="ficha-estudio"><div class="fe-item"><span class="fe-k">Extensi&oacute;n</span><span class="fe-v">~9.700 palabras &middot; 14 diagramas &middot; 60 preguntas de test</span></div><div class="fe-item"><span class="fe-k">Tiempo estimado de estudio</span><span class="fe-v">11-13 horas <span class="fe-n">(primera vuelta completa, sin contar repasos)</span></span></div></div><!-- ficha-estudio:fin -->
 <h2>Qué incluye este tema</h2>
 <table><thead><tr><th>Entregable</th><th>Cantidad</th></tr></thead><tbody>
@@ -452,8 +452,8 @@ consulta = &quot;SELECT * FROM usuario WHERE dni = &#x27;&quot; + dni + &quot;&#
   <path d="M466 130 L212 130" stroke="#2d8659" stroke-width="3" marker-end="url(#b1)"/>
   <text x="340" y="150" text-anchor="middle" style="font:700 10.5px system-ui;fill:#2d8659">200 OK + JSON</text>
   <defs>
-    <marker id="a1" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#0055a0"/></marker>
-    <marker id="b1" markerWidth="9" markerHeight="9" refX="4.5" refY="4.5" orient="auto"><path d="M9 0 L0 4.5 L9 9 z" fill="#2d8659"/></marker>
+    <marker id="a1" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#0055a0"/></marker>
+    <marker id="b1" markerWidth="9" markerHeight="9" refX="8" refY="4.5" orient="auto"><path d="M0 0 L9 4.5 L0 9 z" fill="#2d8659"/></marker>
   </defs>
   <rect x="140" y="196" width="400" height="66" rx="6" fill="#d13c3c"/>
   <text x="340" y="220" text-anchor="middle" class="t1">HTTP es SIN ESTADO (stateless)</text>
@@ -499,11 +499,11 @@ consulta = &quot;SELECT * FROM usuario WHERE dni = &#x27;&quot; + dni + &quot;&#
   <rect x="540" y="34" width="120" height="40" rx="5" fill="#2d8659"/><text x="600" y="50" text-anchor="middle" class="t3">DELETE</text><text x="600" y="66" text-anchor="middle" class="s3">idempotente</text>
   <line x1="20" y1="92" x2="660" y2="92" stroke="#ccc" stroke-width="1"/>
   <text x="340" y="112" text-anchor="middle" style="font:700 11px system-ui;fill:#0055a0">Familias de códigos de estado</text>
-  <rect x="20" y="126" width="120" height="56" rx="5" fill="#888"/><text x="80" y="148" text-anchor="middle" class="t3">1xx</text><text x="80" y="166" text-anchor="middle" class="s3">Informativo</text>
-  <rect x="150" y="126" width="120" height="56" rx="5" fill="#2d8659"/><text x="210" y="148" text-anchor="middle" class="t3">2xx</text><text x="210" y="166" text-anchor="middle" class="s3">Éxito (200, 201, 204)</text>
-  <rect x="280" y="126" width="120" height="56" rx="5" fill="#0055a0"/><text x="340" y="148" text-anchor="middle" class="t3">3xx</text><text x="340" y="166" text-anchor="middle" class="s3">Redirección (301, 304)</text>
-  <rect x="410" y="126" width="120" height="56" rx="5" fill="#e89822"/><text x="470" y="148" text-anchor="middle" class="t3">4xx</text><text x="470" y="166" text-anchor="middle" class="s3">Error cliente (401, 403, 404)</text>
-  <rect x="540" y="126" width="120" height="56" rx="5" fill="#d13c3c"/><text x="600" y="148" text-anchor="middle" class="t3">5xx</text><text x="600" y="166" text-anchor="middle" class="s3">Error servidor (500, 503)</text>
+  <rect x="20" y="126" width="120" height="56" rx="5" fill="#888"/><text x="80" y="146" text-anchor="middle" class="t3">1xx</text><text x="80" y="169" text-anchor="middle" class="s3">Informativo</text>
+  <rect x="150" y="126" width="120" height="56" rx="5" fill="#2d8659"/><text x="210" y="146" text-anchor="middle" class="t3">2xx</text><text x="210" y="163" text-anchor="middle" class="s3">Éxito</text><text x="210" y="176" text-anchor="middle" class="s3">(200, 201, 204)</text>
+  <rect x="280" y="126" width="120" height="56" rx="5" fill="#0055a0"/><text x="340" y="146" text-anchor="middle" class="t3">3xx</text><text x="340" y="163" text-anchor="middle" class="s3">Redirección</text><text x="340" y="176" text-anchor="middle" class="s3">(301, 304)</text>
+  <rect x="410" y="126" width="120" height="56" rx="5" fill="#e89822"/><text x="470" y="146" text-anchor="middle" class="t3">4xx</text><text x="470" y="163" text-anchor="middle" class="s3">Error cliente</text><text x="470" y="176" text-anchor="middle" class="s3">(401, 403, 404)</text>
+  <rect x="540" y="126" width="120" height="56" rx="5" fill="#d13c3c"/><text x="600" y="146" text-anchor="middle" class="t3">5xx</text><text x="600" y="163" text-anchor="middle" class="s3">Error servidor</text><text x="600" y="176" text-anchor="middle" class="s3">(500, 503)</text>
   <rect x="60" y="200" width="560" height="130" rx="6" fill="none" stroke="#d13c3c" stroke-width="2"/>
   <text x="340" y="222" text-anchor="middle" style="font:700 12px system-ui;fill:#d13c3c">401 vs 403 — el par más confundido</text>
   <text x="90" y="248" class="l3"><tspan style="font-weight:700;fill:#d13c3c">401 Unauthorized</tspan> → fallo de AUTENTICACIÓN</text>
@@ -560,7 +560,7 @@ consulta = &quot;SELECT * FROM usuario WHERE dni = &#x27;&quot; + dni + &quot;&#
   <rect x="472" y="52" width="156" height="30" rx="3" fill="#0055a0"/><text x="550" y="72" text-anchor="middle" class="s5">Cabecera</text>
   <rect x="472" y="90" width="60" height="128" rx="3" fill="#e89822"/><text x="502" y="158" text-anchor="middle" class="s5" style="font-size:8px">Nav</text>
   <rect x="536" y="90" width="60" height="128" rx="3" fill="#2d8659"/><text x="566" y="158" text-anchor="middle" class="s5" style="font-size:8px">Contenido</text>
-  <rect x="600" y="90" width="28" height="128" rx="3" fill="#d13c3c"/>
+  <rect x="600" y="90" width="28" height="128" rx="3" fill="#d13c3c"/><text x="614" y="154" text-anchor="middle" class="s5" style="font-size:8px" transform="rotate(-90 614 154)" dy="3">Lateral</text>
   <text x="550" y="256" text-anchor="middle" class="l5" style="font-weight:700">Escritorio (&gt; 960px)</text>
   <text x="340" y="288" text-anchor="middle" style="font:700 11px system-ui;fill:#0055a0">@media (max-width: 600px) { .layout { flex-direction: column } }</text>
   <text x="670" y="312" text-anchor="end" style="font:11px system-ui;fill:#666">[Fuente: MDN-CSS]</text>
@@ -605,7 +605,7 @@ consulta = &quot;SELECT * FROM usuario WHERE dni = &#x27;&quot; + dni + &quot;&#
 <hr>
 <h2>D7 · HTML5: etiquetas semánticas de layout</h2>
 <p><strong>Sección</strong>: §4.3.1 — Etiquetas semánticas <strong>Propósito</strong>: Mapear visualmente <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;aside&gt;</code> y <code>&lt;footer&gt;</code> sobre una página típica.</p>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 340" role="img" aria-label="Layout de página con etiquetas semánticas HTML5: header en la parte superior, nav debajo, main con article a la izquierda y aside a la derecha, footer en la parte inferior">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 680 350" role="img" aria-label="Layout de página con etiquetas semánticas HTML5: header en la parte superior, nav debajo, main con article a la izquierda y aside a la derecha, footer en la parte inferior">
   <style>.t7{font:700 11px system-ui,sans-serif;fill:#fff}.s7{font:9.5px system-ui,sans-serif;fill:#fff}.h7{font:700 13px system-ui,sans-serif;fill:#0055a0}</style>
   <text x="340" y="20" text-anchor="middle" class="h7">Etiquetas semánticas HTML5</text>
   <rect x="60" y="36" width="560" height="44" rx="4" fill="#0055a0"/><text x="340" y="63" text-anchor="middle" class="t7">&lt;header&gt;</text>
@@ -615,7 +615,7 @@ consulta = &quot;SELECT * FROM usuario WHERE dni = &#x27;&quot; + dni + &quot;&#
   <rect x="72" y="150" width="350" height="116" rx="4" fill="#2d8659"/><text x="247" y="212" text-anchor="middle" class="t7">&lt;article&gt;</text>
   <rect x="432" y="150" width="176" height="116" rx="4" fill="#e89822"/><text x="520" y="212" text-anchor="middle" class="t7">&lt;aside&gt;</text>
   <rect x="60" y="284" width="560" height="40" rx="4" fill="#d13c3c"/><text x="340" y="308" text-anchor="middle" class="t7">&lt;footer&gt;</text>
-  <text x="670" y="332" text-anchor="end" style="font:11px system-ui;fill:#666">[Fuente: WHATWG-HTML]</text>
+  <text x="670" y="343" text-anchor="end" style="font:11px system-ui;fill:#666">[Fuente: WHATWG-HTML]</text>
 </svg>
 <hr>
 <h2>D8 · XML: bien formado, válido y validación</h2>
@@ -712,7 +712,7 @@ consulta = &quot;SELECT * FROM usuario WHERE dni = &#x27;&quot; + dni + &quot;&#
   <text x="460" y="194" text-anchor="middle" class="s11">Respuesta lista, en espera</text>
   <path d="M140 212 L300 250" stroke="#888" stroke-width="2"/>
   <path d="M460 212 L380 250" stroke="#888" stroke-width="2"/>
-  <rect x="230" y="252" width="220" height="60" rx="6" fill="#0055a0"/>
+  <rect x="200" y="252" width="280" height="60" rx="6" fill="#0055a0"/>
   <text x="340" y="278" text-anchor="middle" class="t11">Bucle de eventos</text>
   <text x="340" y="296" text-anchor="middle" class="s11">Ejecuta la continuación cuando el hilo está libre</text>
   <text x="670" y="332" text-anchor="end" style="font:11px system-ui;fill:#666">[Fuente: V8-DOC; MDN-JS]</text>
@@ -907,7 +907,7 @@ elemento.textContent = ultimoMensaje;</code></pre>
 <h2>7. Referencias cruzadas a otros temas</h2>
 <ul><li>[ ] Validadas contra BOAM 10.032 (T18, T20, T21, T22, T24, T25, T32, T35, T39)</li><li>[ ] Ninguna referencia cruzada cita un enunciado de tema incorrecto</li></ul>
 <h2>8. Calidad editorial</h2>
-<ul><li>[ ] Ortografía verificada (tildes y ñ) — sin diacríticos perdidos</li><li>[ ] Coherencia de versión (v1.2) en title, badges, banner y footer del <code>index.html</code></li><li>[ ] El <code>index.html</code> abre, navega entre las 8 pestañas y el motor de test funciona</li><li>[ ] Las listas anidadas del Contenido se muestran con sus niveles (sin aplanar)</li><li>[ ] Los bloques de código HTML/CSS/JS/PHP/Python se muestran correctamente formateados, sin markdown crudo</li></ul>
+<ul><li>[ ] Ortografía verificada (tildes y ñ) — sin diacríticos perdidos</li><li>[ ] Coherencia de versión (v1.3) en title, badges, banner y footer del <code>index.html</code></li><li>[ ] El <code>index.html</code> abre, navega entre las 8 pestañas y el motor de test funciona</li><li>[ ] Las listas anidadas del Contenido se muestran con sus niveles (sin aplanar)</li><li>[ ] Los bloques de código HTML/CSS/JS/PHP/Python se muestran correctamente formateados, sin markdown crudo</li></ul>
 <hr>
 <h2>Observaciones abiertas</h2>
 <p>_(Espacio para anotaciones de María, Ana y la revisión IAM.)_</p>
@@ -922,7 +922,7 @@ elemento.textContent = ultimoMensaje;</code></pre>
 <table><thead><tr><th>ID</th><th>Referencia</th></tr></thead><tbody><tr><td><code>[RD1112-2018]</code></td><td>Real Decreto 1112/2018, de 7 de septiembre, sobre accesibilidad de los sitios web y aplicaciones para dispositivos móviles del sector público. Transpone la Directiva (UE) 2016/2102. Base normativa de §3.4.3.</td></tr><tr><td><code>[ENS]</code></td><td>Real Decreto 311/2022, Esquema Nacional de Seguridad — requisitos de autenticación, cifrado en tránsito y trazabilidad aplicables al desarrollo seguro de aplicaciones web municipales.</td></tr><tr><td><code>[RGPD]</code></td><td>Reglamento (UE) 2016/679 (RGPD) y LO 3/2018 (LOPDGDD) — base legal de la gestión de cookies, sesiones y datos personales en aplicaciones web (§3.5, §8.4).</td></tr><tr><td><code>[BOAM10032]</code></td><td>BOAM 10.032 (23-dic-2025). Bases específicas TIC C1 Ayto. Madrid — temario oficial.</td></tr></tbody></table>
 <hr>
 <p><em>Las referencias Tier 1 fijan el fundamento normativo de los estándares abiertos de la web (WHATWG, W3C, IETF, Ecma, OWASP) y son la base de todo el contenido; Tier 2 documenta lenguajes, motores de navegador y frameworks concretos citados como ejemplo (V8/Blink, Node, PHP, Python/Django, React) sin que el tema dependa de ninguno en particular; Tier 3 enmarca la normativa de accesibilidad, seguridad y protección de datos aplicable a una aplicación web del Ayuntamiento de Madrid.</em></p></section>
-<div class="footer">Tema 23 · v1.2 · 2026-07-21 · ETRIVIUM — IAM Ayuntamiento de Madrid · Generado desde los .md (sincronizado)</div>
+<div class="footer">Tema 23 · v1.3 · 2026-07-21 · ETRIVIUM — IAM Ayuntamiento de Madrid · Generado desde los .md (sincronizado)</div>
 </div>
 <script>
 const questions = [
