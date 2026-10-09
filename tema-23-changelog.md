@@ -4,6 +4,16 @@
 
 ---
 
+## v1.4 — 2026-10-09 — Enunciado de una pregunta del test
+
+**Motivo**: revisión de la plataforma por el Ayuntamiento (09-10-2026).
+
+### Cambios
+
+- Pregunta 43 (Java en servidor): reescrita como pregunta con «¿…?». Sin cambios de opciones ni de respuesta.
+
+---
+
 ## v1.3 — 2026-10-06 — Revisión de diagramas
 
 **Motivo**: barrido de los diagramas de los 40 temas tras la revisión jurídica y de normas.

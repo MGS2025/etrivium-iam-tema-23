@@ -734,7 +734,7 @@ C) No existe diferencia real entre ambos términos
 
 ### Pregunta 43
 
-**Java, como lenguaje de servidor en el ámbito web, se apoya principalmente en qué especificación de plataforma, desarrollada en profundidad en otro tema del temario?**
+**¿En qué especificación de plataforma, desarrollada en profundidad en otro tema del temario, se apoya principalmente Java como lenguaje de servidor en el ámbito web?**
 
 A) Jakarta EE (Tema 21)
 B) ECMAScript
